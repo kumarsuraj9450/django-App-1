@@ -5,5 +5,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('vision/', views.add_image, name='vision'),
     path('', views.index, name='index'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] 

@@ -4,22 +4,21 @@
 	<title>base modified</title>
 </head>
 
+{%include 'bootstrap_import.html' %}
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <body>
 
 	{% include 'navbar.html' %}
 
 
-	<div class="jumbotron jumbotron-fluid text-center">
+	<!-- <div class="jumbotron jumbotron-fluid text-center">
 	  <div class="container">
 	    <h1 class="display-4">Fluid jumbotron</h1>
 	    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
 	    
-	   {% block content %}
+	   
 	   		<p> {{ object.message }} </p>
-	   {% endblock %}
+	  
 
 
 	    <form>
@@ -33,6 +32,17 @@
 
 	   <input class="form-control form-control-sm text-center" type="text" placeholder="Enter URL of Image">
 	  </div>
-	</div>
+	</div> -->
+
+	{% block content %}
+	
+		<form method="POST" action='.' enctype='multipart/form-data'> {% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" name="save"/>
+		</form>
+	
+	{% endblock %}
+
+
 </body>
 </html>
