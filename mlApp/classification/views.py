@@ -4,4 +4,8 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse('Hello Web !!!')
+    obj ={'message' : 'Hello Bootstrap'}
+    context = {
+    'object' : obj
+    }
+    return render(request,'base.html',context)
