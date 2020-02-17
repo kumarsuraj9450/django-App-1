@@ -4,7 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    obj ={'message' : 'Hello Bootstrap'}
+    obj = {'message' : 'This is a classification app'}
     context = {
     'object' : obj
     }
