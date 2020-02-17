@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VISION</title>
+	{% include 'bootstrap_import.html' %}
+</head>
+<body>
+{% include 'navbar.html' %}
+
+	{% block content %}
+	
+		<form method="POST" action='.' enctype='multipart/form-data'> {% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" name="save"/>
+		</form>
+	
+	{% endblock %}
+
+	<p>{{ob.image.url}}</p>
+
+
+</body>
+</html>

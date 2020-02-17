@@ -36,8 +36,11 @@ def add_image(requests):
         form.save()
         form=IMAGE_UPLOAD_FORM()
 
+
     context={
-    'form':form
+    'form':form,'ob':image_file.objects.last()
     } 
 
-    return render(requests,'base.html',context)
+    # image_file.objects.
+
+    return render(requests,'vision.html',context)

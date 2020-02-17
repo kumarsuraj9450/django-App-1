@@ -11,38 +11,11 @@
 	{% include 'navbar.html' %}
 
 
-	<!-- <div class="jumbotron jumbotron-fluid text-center">
+	<div class="jumbotron jumbotron-fluid text-center">
 	  <div class="container">
 	    <h1 class="display-4">Fluid jumbotron</h1>
-	    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+	    <p class="lead">This is all DL projects that i've completed.</p>
 	    
-	   
-	   		<p> {{ object.message }} </p>
-	  
-
-
-	    <form>
-			  <div class="form-group text-center">
-			    <label for="exampleFormControlFile1">Example file input</label>
-			    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-			  </div>
-		</form>
-	   
-	   <h6> OR </h6>
-
-	   <input class="form-control form-control-sm text-center" type="text" placeholder="Enter URL of Image">
-	  </div>
-	</div> -->
-
-	{% block content %}
 	
-		<form method="POST" action='.' enctype='multipart/form-data'> {% csrf_token %}
-			{{form.as_p}}
-			<input type="submit" name="save"/>
-		</form>
-	
-	{% endblock %}
-
-
 </body>
 </html>
