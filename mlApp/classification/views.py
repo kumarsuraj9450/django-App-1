@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .forms import IMAGE_UPLOAD_FORM
 # Create your views here.
 
 def index(request):
