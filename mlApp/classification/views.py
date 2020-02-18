@@ -12,7 +12,7 @@ def index(request):
     return render(request,'base.html',context)
 
 # def add_image(request):
-
+    """this is for pure django from"""
 #     form=IMAGE_UPLOAD_FORM()
 
 #     if request.method == 'POST':
@@ -29,7 +29,7 @@ def index(request):
 #     return render(request,'base.html',context)
 
 def add_image(requests):
-
+    """model form"""
     form=IMAGE_UPLOAD_FORM(requests.POST or None, requests.FILES or None)
 
     if form.is_valid():
