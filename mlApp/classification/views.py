@@ -41,9 +41,4 @@ def add_image(requests):
         'form':form,'ob':image_file.objects.last()
         } 
 
-
-
-
-    # image_file.objects.
-
     return render(requests,'vision.html',context)
