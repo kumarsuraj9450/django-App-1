@@ -32,14 +32,17 @@ def add_image(requests):
     """model form"""
     form=IMAGE_UPLOAD_FORM(requests.POST or None, requests.FILES or None)
 
+    context = {'form':form, }
+    
     if form.is_valid():
         form.save()
         form=IMAGE_UPLOAD_FORM()
+        context={
+        'form':form,'ob':image_file.objects.last()
+        } 
 
 
-    context={
-    'form':form,'ob':image_file.objects.last()
-    } 
+
 
     # image_file.objects.
 

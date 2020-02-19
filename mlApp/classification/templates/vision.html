@@ -16,7 +16,9 @@
 	
 	{% endblock %}
 
-	<p>{{ob.image.url}}</p>
+	{% if ob.image.url %}
+		<a href = {{ ob.image.url }} > last object image link</a>
+	{% endif %}
 
 
 </body>
