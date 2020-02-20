@@ -11,4 +11,5 @@ class image_file(models.Model):
         # learner = load_learner('.','stage-1-export-file.pkl')
         # predictedClass = learner.predict(self.image.url)
         pass
+        predictedClass = 'Class'
         return predictedClass

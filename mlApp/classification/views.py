@@ -42,3 +42,7 @@ def add_image(requests):
         } 
 
     return render(requests,'vision.html',context)
+
+def coming_soon(requests):
+    context = {}
+    return render(requests,'coming soon.html',context)

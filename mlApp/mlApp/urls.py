@@ -19,8 +19,15 @@ from django.urls import path,include
 
 from django.conf import settings
 from django.conf.urls.static import static
+from classification import views
 
 urlpatterns = [
-    path('classification/', include('classification.urls')),
+    # path('classification/', include('classification.urls')),
+    path('',views.index),
+    path('classification/',views.add_image),
+    path('objDet/',views.coming_soon),
+    path('segment/',views.coming_soon),
+    path('text/',views.coming_soon),
+    path('GAN/',views.coming_soon),
     path('admin/', admin.site.urls),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

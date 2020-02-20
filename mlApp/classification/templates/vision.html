@@ -9,26 +9,30 @@
 {% load crispy_forms_tags %}
 	
 	{% block content %}
-	
-		<form method="POST" action='.' enctype='multipart/form-data'> {% csrf_token %}
+		
+<div class="jumbotron jumbotron-fluid text-center">
+	<div class="container">
+			<form method="POST" action='.' enctype='multipart/form-data'> {% csrf_token %}
 
-			<div class="col-2 text-center">
-				<!-- <table> -->
-			{{form.image|as_crispy_field}}
-			{{form.url|as_crispy_field}}
-			<!-- <tr colspan=2> -->
-			<input type="submit" name="save" placeholder="Enter URL of image" value="Predict"/>
-					<!-- </tr> -->
-				<!-- </table> -->
-			</div>
-		</form>
+				<div class="col-6 ">
+					
+					{{form.image|as_crispy_field}}
+					{{form.url|as_crispy_field}}
+					
+				<input type="submit" name="save" placeholder="Enter URL of image" value="Predict"/>
+						
+				</div>
+			</form>
 	
 	{% endblock %}
-
+	<br>
+	<br>
 	{% if ob.image.url %}
-		<a href = {{ ob.image.url }} > last object image link</a>
-		<p>{{ % ob.predict() % }}</p>
+		<img src = {{ ob.image.url }} width="142"> 
+		<p>{{  ob.predict  }}</p>
 	{% endif %}
+	</div>
+</div>
 
 
 </body>
